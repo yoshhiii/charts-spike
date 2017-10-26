@@ -10,8 +10,9 @@ export class Ng2chartsDemoComponent implements OnInit {
   radarChartLabels: string[] = ['Knowledge', 'Judgement', 'Other thing', 'another thing', 'one more'];
 
   radarChartData: any = [
-    { data: [90, 81, 56, 55, 40], label: 'Series A' },
-    { data: [40, 19, 96, 27, 100], label: 'Series B' }
+    { data: [90, 81, 80, 72, 60], label: 'My Scores' },
+    { data: [92, 90, 95, 88, 99], label: '80th Percentile' },
+    { data: [50, 60, 67, 75, 73], label: '20th Percentile' }
   ];
   radarChartType = 'radar';
 

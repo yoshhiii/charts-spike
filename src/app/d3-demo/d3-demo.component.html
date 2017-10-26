@@ -1,3 +1,24 @@
-<p>
-  d3-demo works!
-</p>
+<div>
+  <button type="button" class="btn btn-light" (click)="loadBullet()">bullet chart</button>
+  <button type="button" class="btn btn-light" (click)="loadRadar()">radar chart</button>
+  <button type="button" class="btn btn-light" (click)="loadScatter()">scatter chart</button>
+</div>
+<hr>
+<div *ngIf="this.bulletChart">
+  <nvd3 [options]="bulletOptions" [data]="data1"></nvd3>
+  <nvd3 [options]="bulletOptions" [data]="data2"></nvd3>
+  <nvd3 [options]="bulletOptions" [data]="data3"></nvd3>
+  <nvd3 [options]="bulletOptions" [data]="data4"></nvd3>
+  <nvd3 [options]="bulletOptions" [data]="data5"></nvd3>
+  <pre class="pt-3">model: <br>{{bulletOptions | json}}</pre>
+  <pre class="pt-3">data: <br>{{data1 | json}}</pre>
+</div>
+<div *ngIf="this.radarChart">
+  <!-- <nvd3 [options]="radarOptions" [data]="radarData"></nvd3> -->
+  <p> ¯\_(ツ)_/¯ </p>
+</div>
+<div *ngIf="this.scatter">
+  <nvd3 [options]="scatterChart" [data]="scatterData"></nvd3>
+  <pre class="pt-3">model: <br>{{scatterChart | json}}</pre>
+  <pre class="pt-3">data: <br>{{scatterData | json}}</pre>
+</div>

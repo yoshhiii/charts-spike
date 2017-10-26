@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { ChartModule } from 'angular2-highcharts';
+import { NvD3Module } from 'ng2-nvd3';
+
+import 'd3';
+import 'nvd3';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -24,10 +28,16 @@ declare var require: any;
     FormsModule,
     HttpModule,
     AppRoutingModule,
+    NvD3Module, // ng2 d3
     ChartsModule, // ng2-Charts
-    ChartModule.forRoot(require('highcharts')) // Highcharts
+    ChartModule.forRoot(
+      require('highcharts'),
+      require('highcharts/modules/bullet')
+    ) // Highcharts
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  // require;
+}

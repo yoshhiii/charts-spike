@@ -26,9 +26,11 @@
     "core-js": "^2.4.1",
     "d3": "^3.5.5",
     "font-awesome": "^4.7.0",
+    "highcharts": "^6.0.2",
     "jquery": "^3.2.1",
     "ng2-charts": "^1.6.0",
     "ng2-nvd3": "^2.0.0",
+    "popper.js": "^1.12.6",
     "rxjs": "^5.1.0",
     "sass-lint": "^1.12.1",
     "zone.js": "^0.8.4"
