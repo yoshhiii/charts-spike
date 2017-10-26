@@ -32,6 +32,7 @@ declare var require: any;
     ChartsModule, // ng2-Charts
     ChartModule.forRoot(
       require('highcharts'),
+      require('highcharts-more'),
       require('highcharts/modules/bullet')
     ) // Highcharts
   ],
@@ -39,5 +40,5 @@ declare var require: any;
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  // require;
+  require;
 }

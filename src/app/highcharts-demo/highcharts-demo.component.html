@@ -9,10 +9,9 @@
     <!-- <pre class="pt-3">model: <br>{{bulletOptions | json}}</pre> -->
   </div>
   <div *ngIf="this.radarChart">
-    <!-- <nvd3 [options]="radarOptions" [data]="radarData"></nvd3> -->
-    <p> ¯\_(ツ)_/¯ </p>
+    <chart [options]="radarOptions"></chart>
   </div>
   <div *ngIf="this.scatter">
-    <p>scatter</p>
+    <chart [options]="scatterOptions"></chart>
     <!-- <pre class="pt-3">model: <br>{{scatterChart | json}}</pre> -->
   </div>
