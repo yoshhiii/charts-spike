@@ -21,29 +21,45 @@ export class HighchartsDemoComponent implements OnInit {
         marginLeft: 135,
         type: 'bullet'
       },
+      xAxis: {
+        categories: ['<span class="hc-cat-title">Knowledge</span>']
+      },
+      yAxis: {
+        gridLineWidth: 0,
+        plotBands: [{
+          from: 0,
+          to: 20,
+          color: '#666'
+        }, {
+          from: 21,
+          to: 80,
+          color: '#999'
+        }, {
+          from: 81,
+          to: 100,
+          color: '#bbb'
+        }],
+        title: null
+      },
+      tooltip: {
+        pointFormat: '<b>{point.y}</b> (with target at {point.target})'
+      },
       series: [{
         data: [{
           y: 78,     // The value of a point
           target: 90, // The target value of a point
-          name: 'Point1',
-          color: '#00FF00'
-        },
-        {
-          y: 85,     // The value of a point
-          target: 95  // The target value of a point
-        },
-        {
-          y: 72,     // The value of a point
-          target: 88,  // The target value of a point
-        }],
-        targetOptions: { // Options related with look and positiong of targets
-          width: '140%',        // The width of the target
-          height: 3,            // The height of the target
-          borderWidth: 0,       // The border width of the target
-          borderColor: 'black', // The border color of the target
-          color: 'black'
+        }]
+      }],
+      plotOptions: {
+        series: {
+            pointPadding: 0.25,
+            borderWidth: 0,
+            color: '#000',
+            targetOptions: {
+                width: '200%'
+            }
         }
-      }]
+    },
     };
 
     this.radarOptions = {

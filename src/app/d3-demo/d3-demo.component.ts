@@ -36,6 +36,7 @@ export class D3DemoComponent implements OnInit {
         duration: 500,
         width: 800,
         height: 55
+        // color: 'black' // change fill color of bars
       }
     };
 
@@ -44,7 +45,8 @@ export class D3DemoComponent implements OnInit {
       // subtitle: 'US$, in thousands',
       ranges: [20, 80, 100],
       measures: [81],
-      markers: [90]
+      markers: [90],
+      color: 'black'
     };
 
     this.data2 = {

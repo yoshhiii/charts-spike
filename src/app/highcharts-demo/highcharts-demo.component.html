@@ -1,11 +1,14 @@
 <div>
     <button type="button" class="btn btn-light" (click)="loadBullet()">bullet chart</button>
     <button type="button" class="btn btn-light" (click)="loadRadar()">radar chart</button>
-    <button type="button" class="btn btn-light" (click)="loadScatter()">scatter chart</button>
+    <button type="button" class="btn btn-light" (click)="loadScatter()">scatter plot</button>
   </div>
   <hr>
   <div *ngIf="this.bulletChart">
     <chart [options]="options"></chart>
+    <div id="container1"></div>
+    <div id="container2"></div>
+    <div id="container3"></div>
     <!-- <pre class="pt-3">model: <br>{{bulletOptions | json}}</pre> -->
   </div>
   <div *ngIf="this.radarChart">

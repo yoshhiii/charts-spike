@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { ChartModule } from 'angular2-highcharts';
 import { NvD3Module } from 'ng2-nvd3';
+// import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import 'd3';
 import 'nvd3';
@@ -15,7 +16,7 @@ import { D3DemoComponent } from './d3-demo/d3-demo.component';
 import { Ng2chartsDemoComponent } from './ng2charts-demo/ng2charts-demo.component';
 import { HighchartsDemoComponent } from './highcharts-demo/highcharts-demo.component';
 
-declare var require: any;
+declare const require: any;
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ declare var require: any;
     AppRoutingModule,
     NvD3Module, // ng2 d3
     ChartsModule, // ng2-Charts
+    // NgxChartsModule,
     ChartModule.forRoot(
       require('highcharts'),
       require('highcharts-more'),

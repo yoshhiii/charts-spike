@@ -16,6 +16,30 @@ export class Ng2chartsDemoComponent implements OnInit {
   ];
   radarChartType = 'radar';
 
+  scatterType = 'scatter';
+  scatterData = {
+      data: [{
+        x: -10,
+        y: 0
+      }, {
+        x: 0,
+        y: 10
+      }, {
+        x: 10,
+        y: 5
+      }]
+    };
+  scatterOptions = {
+    options: {
+      scales: {
+        xAxes: [{
+          type: 'linear',
+          position: 'bottom'
+        }]
+      }
+    }
+  };
+
   // events
   chartClicked(e: any): void {
     console.log(e);
