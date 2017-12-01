@@ -17,7 +17,8 @@ export class Ng2chartsDemoComponent implements OnInit {
   radarChartType = 'radar';
 
   scatterType = 'scatter';
-  scatterData = {
+  scatterData: any = [
+    { label: 'Scatter Dataset',
       data: [{
         x: -10,
         y: 0
@@ -28,7 +29,20 @@ export class Ng2chartsDemoComponent implements OnInit {
         x: 10,
         y: 5
       }]
-    };
+    },
+    { label: 'Scatter Dataset 2',
+    data: [{
+      x: -15,
+      y: 6
+    }, {
+      x: 4,
+      y: 14
+    }, {
+      x: 16,
+      y: 7
+    }]
+  }
+  ];
   scatterOptions = {
     options: {
       scales: {
